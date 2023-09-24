@@ -1,0 +1,199 @@
+2023-09-14 15:58:31.0606 INFO 部件 DmdPainter 初始化.
+2023-09-14 15:58:32.5085 INFO 开始伺服轴回零.
+2023-09-14 15:58:37.9389 INFO 伺服轴回零完毕.
+2023-09-14 15:58:39.0370 INFO 开始移动到上料位.
+2023-09-14 15:58:43.7522 INFO 部件 DmdPainter 初始化完成.
+2023-09-14 15:58:44.1775 INFO 启用部件 Station.
+2023-09-14 15:59:16.5288 INFO 设备工位停止运行.
+2023-09-14 15:59:16.5543 INFO Motion Engine STOP.
+2023-09-14 15:59:28.0297 FATAL Exception of type 'Exposure.Motion.IoControllerException' was thrown.
+2023-09-14 15:59:39.9110 INFO 部件 DmdPainter 初始化完成.
+2023-09-14 15:59:39.9321 INFO 启用部件 Station.
+2023-09-14 16:01:58.5716 INFO 加载文档 4208042b0-wf_SM1-LDI 开始.
+2023-09-14 16:02:06.0634 FATAL 曝光流程发生致命异常:System.OverflowException: Arithmetic operation resulted in an overflow.
+   at Exposure.Documents.Serialization.SerializationExtension.ReadPoint2Fs(BinaryReader reader)
+   at Exposure.Documents.Serialization.SerializationExtension.ReadGeometry2F(BinaryReader reader)
+   at Exposure.Documents.Serialization.SerializationExtension.ReadGeometry2Fs(BinaryReader reader)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Exposure.Documents.Serialization.BinaryMeshFile.Read(Stream stream, Boolean isSimplify)
+   at Exposure.Documents.Serialization.BinaryMeshFile.Read(Stream stream)
+   at Exposure.Documents.Serialization.BinaryMeshFile.<>c__DisplayClass5_0.<ReadAsync>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Exposure.Documents.Serialization.BinaryMeshFile.ReadAsync(Stream stream, CancellationToken cancellationToken)
+   at Exposure.Motion.DocumentContext.PrepareAsync(DocumentContext cache) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\DocumentContext.cs:line 61
+   at Exposure.Motion.DocumentContext.PrepareAsync(DocumentContext cache) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\DocumentContext.cs:line 80
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 441
+2023-09-14 16:08:16.6267 INFO 部件 DmdPainter 初始化.
+2023-09-14 16:08:16.6913 INFO 开始伺服轴回零.
+2023-09-14 16:08:29.1414 INFO 启用部件 Station.
+2023-09-14 16:08:47.1022 INFO 加载文档 4208042b0-wf_SM1-LDI 开始.
+2023-09-14 16:08:47.1928 INFO 加载文档 4208042b0-wf_SM1-LDI 完毕.
+2023-09-14 16:08:53.5776 INFO 传输文档 5cd3774a-d918-4d39-9754-f6381b84ede5: 4208042b0-wf_SM1-LDI 完毕.
+2023-09-14 16:08:59.2984 INFO 切换文档 5cd3774a-d918-4d39-9754-f6381b84ede5: 4208042b0-wf_SM1-LDI
+2023-09-14 16:09:02.3044 INFO 加载工艺参数 NewName 完毕.
+2023-09-14 16:11:20.9534 INFO Station文档更改为:4208042b0-wf_SM1-LDI Cache:5cd3774a-d918-4d39-9754-f6381b84ede5
+2023-09-14 16:11:27.6724 INFO Station 等待移栽机放料完成或手动曝光信号.
+2023-09-14 16:12:01.6736 INFO Motion Engine STOP.
+2023-09-14 16:12:03.2428 INFO 设备工位停止运行.
+2023-09-14 16:12:07.0853 INFO Motion Engine STOP.
+2023-09-14 16:12:12.6409 INFO 部件 DmdPainter 初始化.
+2023-09-14 16:12:14.4623 INFO 开始伺服轴回零.
+2023-09-14 16:12:21.4023 INFO 伺服轴回零完毕.
+2023-09-14 16:12:22.1186 INFO 开始移动到上料位.
+2023-09-14 16:12:27.4604 INFO 部件 DmdPainter 初始化完成.
+2023-09-14 16:12:29.8943 INFO 启用部件 Station.
+2023-09-14 16:12:36.5491 FATAL 曝光流程发生致命异常:System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at Exposure.Motion.DocumentContext.PrepareAsync(DocumentContext cache) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\DocumentContext.cs:line 82
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 446
+2023-09-14 16:12:48.2237 INFO Motion Engine STOP.
+2023-09-14 16:12:57.9322 INFO 部件 DmdPainter 初始化完成.
+2023-09-14 16:12:57.9322 INFO 启用部件 Station.
+2023-09-14 16:13:27.9308 FATAL 曝光流程发生致命异常:System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at Exposure.Motion.DocumentContext.PrepareAsync(DocumentContext cache) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\DocumentContext.cs:line 82
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 446
+2023-09-14 16:13:30.3201 INFO Motion Engine STOP.
+2023-09-14 16:13:35.8158 INFO 部件 DmdPainter 初始化完成.
+2023-09-14 16:13:35.8346 INFO 启用部件 Station.
+2023-09-14 16:14:53.2763 INFO 切换文档 5cd3774a-d918-4d39-9754-f6381b84ede5: 4208042b0-wf_SM1-LDI
+2023-09-14 16:14:56.6831 INFO 加载工艺参数 NewName 完毕.
+2023-09-14 16:15:04.8374 INFO Station文档更改为:4208042b0-wf_SM1-LDI Cache:5cd3774a-d918-4d39-9754-f6381b84ede5
+2023-09-14 16:15:04.8374 INFO Station 等待移栽机放料完成或手动曝光信号.
+2023-09-15 08:31:18.5573 INFO 部件 DmdPainter 初始化.
+2023-09-15 08:31:19.7091 INFO 开始伺服轴回零.
+2023-09-15 08:31:24.8046 INFO 伺服轴回零完毕.
+2023-09-15 08:31:25.6603 INFO 开始移动到上料位.
+2023-09-15 08:31:31.8792 INFO 部件 DmdPainter 初始化完成.
+2023-09-15 08:31:32.3291 INFO 启用部件 Station.
+2023-09-15 08:35:15.4695 INFO 部件 DmdPainter 初始化.
+2023-09-15 08:35:17.2846 INFO 开始伺服轴回零.
+2023-09-15 08:35:22.1654 INFO 伺服轴回零完毕.
+2023-09-15 08:35:23.7939 INFO 开始移动到上料位.
+2023-09-15 08:35:29.3846 INFO 部件 DmdPainter 初始化完成.
+2023-09-15 08:35:29.6321 INFO 启用部件 Station.
+2023-09-15 08:35:29.6321 INFO 启用部件 SlaveStation.
+2023-09-15 08:37:14.4849 INFO 部件 DmdPainter 初始化.
+2023-09-15 08:37:15.7400 INFO 开始伺服轴回零.
+2023-09-15 08:37:20.3182 INFO 伺服轴回零完毕.
+2023-09-15 08:37:21.6618 INFO 开始移动到上料位.
+2023-09-15 08:37:28.1992 INFO 部件 DmdPainter 初始化完成.
+2023-09-15 08:37:28.4694 INFO 启用部件 Station.
+2023-09-15 08:38:29.6956 INFO 部件 DmdPainter 初始化.
+2023-09-15 08:38:30.8069 INFO 开始伺服轴回零.
+2023-09-15 08:38:35.9436 INFO 伺服轴回零完毕.
+2023-09-15 08:38:36.5626 INFO 开始移动到上料位.
+2023-09-15 08:38:41.1278 INFO 部件 DmdPainter 初始化完成.
+2023-09-15 08:38:41.4070 INFO 启用部件 Station.
+2023-09-15 08:38:50.8870 INFO 设备工位停止运行.
+2023-09-15 08:38:50.9227 INFO Motion Engine STOP.
+2023-09-15 08:40:41.4889 INFO 部件 DmdPainter 初始化.
+2023-09-15 08:40:42.7906 INFO 开始伺服轴回零.
+2023-09-15 08:40:46.7173 INFO 伺服轴回零完毕.
+2023-09-15 08:40:48.0560 INFO 开始移动到上料位.
+2023-09-15 08:40:52.3147 INFO 部件 DmdPainter 初始化完成.
+2023-09-15 08:40:52.5686 INFO 启用部件 Station.
+2023-09-15 08:41:01.1164 INFO 设备工位停止运行.
+2023-09-15 08:41:01.1443 INFO Motion Engine STOP.
+2023-09-15 08:41:11.5324 FATAL Exception of type 'Exposure.Motion.IoControllerException' was thrown.
+2023-09-15 08:42:28.0624 INFO 部件 DmdPainter 初始化.
+2023-09-15 08:42:29.6921 INFO 开始伺服轴回零.
+2023-09-15 08:42:35.8046 INFO 伺服轴回零完毕.
+2023-09-15 08:42:37.3018 INFO 开始移动到上料位.
+2023-09-15 08:42:42.1643 INFO 部件 DmdPainter 初始化完成.
+2023-09-15 08:42:42.3935 INFO 启用部件 Station.
+2023-09-16 12:27:09.9098 INFO 部件 DmdPainter 初始化.
+2023-09-16 12:27:11.3738 INFO 开始伺服轴回零.
+2023-09-16 12:27:17.6707 INFO 部件 DmdPainter 初始化完成.
+2023-09-16 12:27:18.1173 INFO 启用部件 Station.
+2023-09-16 12:27:18.1173 INFO 启用部件 SlaveStation.
+2023-09-16 12:27:18.2038 FATAL Value cannot be null. (Parameter 'source')
+2023-09-16 12:27:18.2292 FATAL Nullable object must have a value.
+2023-09-16 12:27:56.8169 INFO 部件 DmdPainter 初始化.
+2023-09-16 12:27:57.9686 INFO 开始伺服轴回零.
+2023-09-16 12:28:02.2025 INFO 伺服轴回零完毕.
+2023-09-16 12:28:02.9272 INFO 开始移动到上料位.
+2023-09-16 12:28:09.4457 INFO 部件 DmdPainter 初始化完成.
+2023-09-16 12:28:10.1805 INFO 启用部件 Station.
+2023-09-16 12:28:10.2542 FATAL Nullable object must have a value.
+2023-09-16 12:28:25.4411 INFO Motion Engine STOP.
+2023-09-16 12:28:57.7341 INFO 部件 DmdPainter 初始化.
+2023-09-16 12:28:58.8589 INFO 开始伺服轴回零.
+2023-09-16 12:29:03.2840 INFO 伺服轴回零完毕.
+2023-09-16 12:29:04.6544 INFO 开始移动到上料位.
+2023-09-16 12:29:09.8162 INFO 部件 DmdPainter 初始化完成.
+2023-09-16 12:29:10.1106 INFO 启用部件 Station.
+2023-09-16 12:30:56.9442 FATAL 曝光流程发生致命异常:System.Threading.SemaphoreFullException: Adding the specified count to the semaphore would cause it to exceed its maximum count.
+   at System.Threading.SemaphoreSlim.Release(Int32 releaseCount)
+   at System.Threading.SemaphoreSlim.Release()
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 796
+2023-09-16 12:31:05.3665 INFO Motion Engine STOP.
+2023-09-16 12:32:00.1382 INFO 部件 DmdPainter 初始化.
+2023-09-16 12:32:01.5742 INFO 开始伺服轴回零.
+2023-09-16 12:32:05.4352 INFO 伺服轴回零完毕.
+2023-09-16 12:32:07.1121 INFO 开始移动到上料位.
+2023-09-16 12:32:13.1389 INFO 部件 DmdPainter 初始化完成.
+2023-09-16 12:32:13.3973 INFO 启用部件 Station.
+2023-09-16 12:32:42.0015 FATAL 曝光流程发生致命异常:System.Exception: Exception of type 'System.Exception' was thrown.
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 791
+2023-09-16 12:32:44.5913 INFO Motion Engine STOP.
+2023-09-19 10:58:12.6964 INFO 部件 DmdPainter 初始化.
+2023-09-19 10:58:13.9632 INFO 开始伺服轴回零.
+2023-09-19 10:58:18.3707 INFO 伺服轴回零完毕.
+2023-09-19 10:58:20.0691 INFO 开始移动到上料位.
+2023-09-19 10:58:26.6311 INFO 部件 DmdPainter 初始化完成.
+2023-09-19 10:58:26.8810 INFO 启用部件 Station.
+2023-09-19 10:59:29.5045 INFO 设备工位停止运行.
+2023-09-19 10:59:29.5293 INFO Motion Engine STOP.
+2023-09-19 10:59:40.3486 FATAL Exception of type 'Exposure.Motion.IoControllerException' was thrown.
+2023-09-19 10:59:50.1195 INFO 部件 DmdPainter 初始化完成.
+2023-09-19 10:59:50.1195 INFO 启用部件 Station.
+2023-09-19 11:00:24.9003 INFO Motion Engine STOP.
+2023-09-19 11:00:25.4996 FATAL 资料服务器发生异常:Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(ConnectContext context)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+   at Grpc.Net.Client.Internal.HttpClientCallInvoker.BlockingUnaryCall[TRequest,TResponse](Method`2 method, String host, CallOptions options, TRequest request)
+   at Grpc.Core.Interceptors.InterceptingCallInvoker.<BlockingUnaryCall>b__3_0[TRequest,TResponse](TRequest req, ClientInterceptorContext`2 ctx)
+   at Grpc.Core.ClientBase.ClientBaseConfiguration.ClientBaseConfigurationInterceptor.BlockingUnaryCall[TRequest,TResponse](TRequest request, ClientInterceptorContext`2 context, BlockingUnaryCallContinuation`2 continuation)
+   at Grpc.Core.Interceptors.InterceptingCallInvoker.BlockingUnaryCall[TRequest,TResponse](Method`2 method, String host, CallOptions options, TRequest request)
+   at ProtoBuf.Grpc.Internal.Proxies.ClientBase.IInstructionService_Proxy_4.IInstructionService.GetInstruction()
+   at Exposure.Motion.ArchiveProxy.GetInstruction() in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\ArchiveProxy.cs:line 107
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 411
+2023-09-19 11:00:38.2888 INFO 部件 DmdPainter 初始化完成.
+2023-09-19 11:00:38.3177 INFO 启用部件 Station.
+2023-09-19 11:01:06.5710 FATAL 资料服务器发生异常:Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(ConnectContext context)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+   at Grpc.Net.Client.Internal.HttpClientCallInvoker.BlockingUnaryCall[TRequest,TResponse](Method`2 method, String host, CallOptions options, TRequest request)
+   at Grpc.Core.Interceptors.InterceptingCallInvoker.<BlockingUnaryCall>b__3_0[TRequest,TResponse](TRequest req, ClientInterceptorContext`2 ctx)
+   at Grpc.Core.ClientBase.ClientBaseConfiguration.ClientBaseConfigurationInterceptor.BlockingUnaryCall[TRequest,TResponse](TRequest request, ClientInterceptorContext`2 context, BlockingUnaryCallContinuation`2 continuation)
+   at Grpc.Core.Interceptors.InterceptingCallInvoker.BlockingUnaryCall[TRequest,TResponse](Method`2 method, String host, CallOptions options, TRequest request)
+   at ProtoBuf.Grpc.Internal.Proxies.ClientBase.IInstructionService_Proxy_4.IInstructionService.GetInstruction()
+   at Exposure.Motion.ArchiveProxy.GetInstruction() in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\ArchiveProxy.cs:line 107
+   at Exposure.Motion.Station.RunningAsync(Boolean isSimulation) in D:\A光刻项目\源码\525DMSource\Exposure.Motion\Engine\Station.cs:line 411
+2023-09-19 11:01:21.8166 INFO Motion Engine STOP.
+2023-09-19 11:01:29.9912 INFO 部件 DmdPainter 初始化完成.
+2023-09-19 11:01:30.0207 INFO 启用部件 Station.
+2023-09-19 11:22:54.0053 ERROR IO板停止更新Exception of type 'Exposure.Motion.IoControllerException' was thrown.
+2023-09-19 11:23:00.0590 ERROR ACS停止更新Object reference not set to an instance of an object.
+2023-09-19 11:23:00.5294 ERROR IO板停止更新Exception of type 'Exposure.Motion.IoControllerException' was thrown.
+2023-09-19 11:23:03.3702 ERROR IO板停止更新Exception of type 'Exposure.Motion.IoControllerException' was thrown.

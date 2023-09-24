@@ -1,0 +1,83 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			  xmlns:vm="using:PlatesAvaloniaProject.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+			 Height="500"
+             x:Class="PlatesAvaloniaProject.Views.ProductionView"
+			  x:DataType="vm:ProductionViewModel">
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:ProductionViewModel/>
+	</Design.DataContext>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="120"/>
+			<RowDefinition Height="*"/>					
+		</Grid.RowDefinitions>
+		<Grid.Styles>
+			<Style Selector="Border.drop">
+				<Setter Property="Background" Value="Gray" />
+			</Style>
+			<Style Selector="Border">
+				<Setter Property="CornerRadius" Value="10" />
+			</Style>
+			<Style Selector="TextBlock">
+				<Setter Property="VerticalAlignment" Value="Center" />
+				<Setter Property="HorizontalAlignment" Value="Center" />
+			</Style>
+		</Grid.Styles>
+
+		<Border Name="MoveTarget"
+				   Classes="drop"
+				   Grid.Row="0"
+				   DragDrop.AllowDrop="True">
+			<StackPanel Orientation="Vertical">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="auto"/>
+						<RowDefinition Height="auto"/>
+
+					</Grid.RowDefinitions>
+					<TextBlock>
+						<Run Text="+" FontSize="80" />
+					</TextBlock>
+					<TextBlock FontSize="20"  Grid.Row="1"  HorizontalAlignment="Left">
+						<Run Text="目标路径:" />
+						<Run Text="{Binding TargetPath}"/>
+					</TextBlock>
+			   </Grid>				
+			</StackPanel>
+		</Border>
+		<StackPanel  Margin="5,20" Grid.Row="1" > 
+			<DataGrid  ItemsSource="{Binding UpdateInfosSource}"  GridLinesVisibility="Horizontal"
+			CanUserReorderColumns="True"
+			CanUserResizeColumns="True"
+			BorderThickness="2" BorderBrush="Gray" Height="350">
+				<DataGrid.Columns>
+					<DataGridTextColumn   Binding="{Binding Key}"  Width="150" IsReadOnly="True" >
+						<DataGridTextColumn.Header>
+							<TextBlock Text="更新序号" Margin="0,0,5,0" FontWeight="Black"/>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+					<DataGridTextColumn   Binding="{Binding Description}" Width="150" IsReadOnly="True" CanUserSort="False">
+						<DataGridTextColumn.Header>
+							<TextBlock Text="更新描述" Margin="0,0,5,0" FontWeight="Black"/>
+						</DataGridTextColumn.Header>
+
+					</DataGridTextColumn>
+					<DataGridTextColumn   Binding="{Binding UpdateTime}" Width="150" IsReadOnly="True" >
+						<DataGridTextColumn.Header>
+							<TextBlock Text="更新时间" Margin="0,0,5,0" FontWeight="Black"/>
+						</DataGridTextColumn.Header>
+
+					</DataGridTextColumn>
+				
+				</DataGrid.Columns>
+			</DataGrid>
+
+		</StackPanel>
+	</Grid>
+</UserControl>
